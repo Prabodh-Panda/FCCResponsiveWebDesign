@@ -1,0 +1,123 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face{
+    font-family: Academy;
+    src: url('./fonts/Academy.ttf');
+}
+
+@font-face{
+    font-family: Golgotha;
+    src: url('./fonts/Golgotha\ Regular.ttf');
+}
+
+@font-face{
+    font-family: CaslonAntique;
+    src: url('./fonts/CaslonAntique.ttf');
+}
+
+@font-face{
+    font-family: Aquiline;
+    src: url('./fonts/AquilineTwo.ttf');
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url('./images/Background.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+main {
+    min-height: 80vh;
+}
+
+h1 {
+    font-family: Academy;
+    font-size: 3em;
+    font-weight: normal;
+}
+
+p{
+    font-family: Golgotha;
+}
+
+label {
+    font-family: CaslonAntique;
+    margin: 0 1em;
+    font-size: 1.5em;
+}
+
+.text-input, select{
+    font-family: Aquiline;
+    background: none;
+    border: none;
+    outline: none;
+    font-size: 2em;
+}
+
+.multi-input {
+    display: flex;
+    align-items: center;
+}
+
+.text-input-label {
+    font-size: 2em;
+}
+
+.radio-grp-container{
+    display: flex;
+}
+
+.radio-input-grp .input-grp{
+    display: flex;
+}
+
+.radio-input-grp input{
+    margin-left: auto;
+}
+
+textarea {
+    background: none;
+    border: none;
+    outline: none;
+    font-family: Golgotha;
+    font-size: 1.5em;
+    border: 1px solid rgba(0,0,0,0.5);
+}
+
+.textarea-input-grp{
+    display: flex;
+}
+
+button{
+    float: right;
+    padding: 10px 20px;
+    font-family: Aquiline;
+    font-size: 1.5em;
+    background: none;
+    border: 1px solid black;
+}
+
+button:hover {
+    scale: 1.1;
+    cursor: pointer;
+}
+
+input[type="number"] {
+    font-family: Golgotha;
+    -moz-appearance: textfield;
+}
+
+input::-webkit-inner-spin-button,
+input::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}

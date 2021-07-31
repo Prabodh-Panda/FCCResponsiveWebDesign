@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Potterhead</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <header>
+            <h1 id="title">Harry Potter Fan Form</h1>
+            <p id="description">Survey Form for Free Code Camp Responsive Web Design Course</p>
+        </header>
+        <form action="" id="survey-form">
+            <div class="multi-input">
+                <div class="input-grp">
+                    <label class="text-input-label" for="name" id="name-label">Name</label>
+                    <input class="text-input" type="text" name="name" id="name" required placeholder="Enter your name">
+                </div>
+                <div class="input-grp">
+                    <label class="text-input-label" for="email" id="email-label">Email</label>
+                    <input class="text-input" type="email" name="email" id="email" required placeholder="Enter your email">
+                </div>
+            </div>
+            <div class="multi-input">
+                <div class="input-grp">
+                    <label class="text-input-label" for="number" id="number-label">Age</label>
+                    <input class="text-input" type="number" name="number" id="number" max="200" min="1" placeholder="Age">
+                </div>
+                <div class="input-grp">
+                    <label class="text-input-label" for="dropdown">House</label>
+                    <select name="class" id="dropdown">
+                        <option value="Gryffindor">Gryffindor</option>
+                        <option value="Slytherin">Slytherin</option>
+                        <option value="Hufflepuff">Hufflepuff</option>
+                        <option value="Ravenclaw">Ravenclaw</option>
+                    </select>
+                </div>
+            </div>
+            <div class="category">
+                <div class="radio-grp-container">
+                    <label for="category">What are you?</label>
+                <div class="radio-input-grp">
+                    <div class="input-grp">
+                        <label for="pureblood"><span>Pureblood</span> - Have read books and seen the movies</label>
+                        <input type="radio" name="category" id="pureblood" value="pureblood">
+                    </div>
+                    <div class="input-grp">
+                        <label for="halfblood"><span>Half-Blood</span> - Have only read the books</label>
+                        <input type="radio" name="category" id="halfblood" value="halfblood">
+                    </div>
+                    <div class="input-grp">
+                        <label for="muggle"><span>Muggle-Borns</span> - Have only seen the movies</label>
+                        <input type="radio" name="category" id="muggle" value="muggle">
+                    </div>
+                    <div class="input-grp">
+                        <label for="squibs"><span>Squibs</span> - Never seen or read HP</label>
+                        <input type="radio" name="category" id="squibs" value="squibs">
+                    </div>
+                    <div class="input-grp">
+                        <label for="deatheater"><span>Deatheater</span> - Purebloods that hate on Muggle-Borns</label>
+                        <input type="radio" name="category" id="deatheater" value="deatheater">
+                    </div>
+                    <div class="input-grp">
+                        <label for="dursleys"><span>Dursleys</span> - Idiots that hate on HP</label>
+                        <input type="radio" name="category" id="dursleys" value="dursleys">
+                    </div>
+                </div>
+                </div>
+                <div class="input-grp">
+                    <label>Favourite among the golden trio: </label>
+                    <label>Hermione</label>
+                    <input type="checkbox" name="fav" id="Hermione" value="Hermione">
+                    <label>Ron</label>
+                    <input type="checkbox" name="fav" id="Ron" value="Ron">
+                    <label>Harry</label>
+                    <input type="checkbox" name="fav" id="Harry" value="Harry">
+                </div>
+                <div class="input-grp textarea-input-grp">
+                    <label for="info">Comments on the movie?</label>
+                    <textarea name="info" id="info" cols="30" rows="5"></textarea>
+                </div>
+            </div>
+            <button type="submit" id="submit">Submit</button>
+        </form>
+    </main>
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+</body>
+</html>
