@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logistics Manager | Technical Documentation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="main-nav">
+        <h1>Logistics Manager Documentation</h1>
+    </div>
+    <div class="main-content">
+        <nav id="navbar">
+            <header>
+                Installation
+            </header>
+            <ul>
+                <li><a href="#Setting_Up_Database_Credentials" class="nav-link">Setting Up Database Credentials</a></li>
+                <li><a href="#Setting_Up_Database_Tables" class="nav-link">Setting Up Database Tables</a></li>
+            </ul>
+            <h1 class="nav-bar-grp-header">
+                Registering New Company / Branch
+            </h1>
+            <ul>
+                <li><a href="#Registering_New_Company" class="nav-link">Registering New Company</a></li>
+                <li><a href="#Registering_New_Branch" class="nav-link">Registering New Branch</a></li>
+            </ul>
+            <h1 class="nav-bar-grp-header">
+                Logging In
+            </h1>
+            <ul>
+                <li><a href="#Logging_In" class="nav-link">Logging In</a></li>
+            </ul>
+        </nav>
+        <main id="main-doc">
+            <div class="section-grp">
+                <section id="Setting_Up_Database_Credentials" class="main-section">
+                    <header>Setting Up Database Credentials</header>
+                    <p>When you first open the JAR File the following screen is shown: </p>
+                    <img src="./Logistics Manager Screens/DB Credentials.PNG" alt="Database Credentials">
+                    <p>Enter the username and password you use to access your mysql database. This will create a config
+                        file in the following location: </p>
+                    <code>
+                        C:/Logistics_Manager/logistics_manager.config
+                    </code>
+                    <p>There you can change the username and password in future.</p>
+                </section>
+
+                <section id="Setting_Up_Database_Tables" class="main-section">
+                    <header>Setting Up Database Tables</header>
+                    <p>The application needs a database name "logistics_manager" to function. In addition to the
+                        database, the application needs the following tables: </p>
+                    <ol>
+                        <li>branches</li>
+                        <li>companies</li>
+                        <li>shippings</li>
+                        <li>users</li>
+                        <li>vehicles</li>
+                    </ol>
+                    <p>You can easily create these tables with the help of the included SQL script. Just open your MySQL
+                        command line client and run the following command: </p>
+                    <code>sql> source &lt;PATH_TO_SQL_SCRIPT&gt; </code>
+                    <p>Check the Installation Tutorial <a href="https://youtu.be/O2WGEQkELmQ" target="_blank">Here</a>
+                    </p>
+                </section>
+            </div>
+            <div class="section-grp">
+                <section id="Registering_New_Company" class="main-section">
+                    <header>
+                        Registering New Company
+                    </header>
+                    <p>First You need to register a new company. Open the JAR File and click on register. This will open
+                        the following window: </p>
+                    <img src="./Logistics Manager Screens/Register One.png" alt="">
+                    <p>The Registration Screen has two tabs: One for registering a new company and other for registering
+                        a new branch. On the first tab enter the details of the new company to be created. This is the
+                        code that registers the new company. </p>
+                    <code>
+                        String SQL = "INSERT INTO `logistics_manager`.`companies`(`Name`,`Location`) VALUES (?,?)";
+                    </code>
+                </section>
+                <section id="Registering_New_Branch" class="main-section">
+                    <header>
+                        Registering New Branch
+                    </header>
+                    <p>On the previous screen you registered a new company. On that screen click on the second tab. This
+                        will open the following tab: </p>
+                    <img src="./Logistics Manager Screens/Register Two.png" alt="">
+                    <p>Enter the details of the new branch to be registered. This is the sql query that creates a new
+                        branch: </p>
+                    <code>
+                        String SQL = "INSERT INTO `logistics_manager`.`branches`(`Name`,`Location`, `CMPID`) VALUES (?,?,?)";
+                    </code>
+                </section>
+            </div>
+            <div class="section-grp">
+                <section id="Logging_In" class="main-section">
+                    <header>Logging In</header>
+                    <p>Open the JAR File. You will see the following window: </p>
+                    <img src="./Logistics Manager Screens/Login.png" alt="">
+                    <p>This is the code that checks the credentials</p>
+                    <code class="no-styles">
+                        <pre>
+
+ResultSet rs = conn.query("select * from users where username = " + "\'" + username + "\'");
+try {
+    if (rs.next()) {
+        if(password.equals(rs.getString("password"))){
+            CMPID = rs.getInt("CMPID");
+            return true;
+        }
+    }
+        return false;
+}
+                        </pre>
+                    </code>
+                </section>
+            </div>
+        </main>
+    </div>
+
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+</body>
+
+</html>
