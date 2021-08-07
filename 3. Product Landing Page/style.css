@@ -1,0 +1,246 @@
+@import url("https://fonts.googleapis.com/css2?family=Style+Script&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lobster&family=Raleway&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  height: 60px;
+  position: fixed;
+  padding: 0 50px;
+  width: 100%;
+  color: white;
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.branding {
+  display: flex;
+}
+
+.branding h1,
+.content h1 {
+  font-family: "Lobster", cursive;
+}
+
+p,
+li,
+dd,
+dt {
+  font-family: "Raleway", sans-serif;
+}
+
+#header-img {
+  height: 40px;
+  margin-right: 30px;
+}
+
+nav {
+  display: flex;
+  margin-left: auto;
+}
+
+nav li {
+  margin: 0 10px;
+}
+
+main {
+  height: 100vh;
+  background-blend-mode: overlay;
+  background: url("./bg-main.jpg");
+  background-color: rgba(0, 0, 0, 0.6);
+  background-size: cover;
+  background-position: center;
+  padding: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: white;
+}
+
+.content {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.button-link {
+  width: 100px;
+  text-align: center;
+  display: inline-block;
+  padding: 10px;
+  background: none;
+  border: 2px solid #c69963;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  margin: 10px 2px;
+  color: white;
+}
+
+input {
+  padding: 10px;
+  background: none;
+  border: none;
+  border: 2px solid #c69963;
+  color: white;
+  outline: none;
+}
+
+section {
+  height: 50vh;
+  width: 100%;
+  margin: 10px 0;
+  padding: 30px 10%;
+}
+
+.section-header {
+  font-family: "Style Script", cursive;
+  font-size: 2.5em;
+  color: #c69963;
+}
+
+#installation {
+  display: flex;
+  justify-content: space-between;
+}
+
+.section-details {
+  margin-right: 40px;
+}
+
+.nav-link-li a {
+  position: relative;
+  padding: 2px;
+}
+
+.nav-link-li a::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0;
+  height: 2px;
+  width: 100%;
+  background-color: #c69963;
+  transform: scaleX(0);
+  transition: all 0.3s ease;
+}
+
+section li {
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+section dt {
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+footer {
+  height: 10vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+footer p {
+  margin-bottom: 10px;
+}
+
+footer a {
+  text-decoration: underline;
+}
+
+/* nav-link-li Hover */
+.nav-link-li a:hover::after {
+  transform: scaleX(1);
+}
+
+/* Alternating Section Styles */
+section:nth-child(odd) {
+  height: 40vh;
+  background-color: #101d2c;
+  color: white;
+}
+
+/* HOVER EFFECTS - .button-link  */
+.button-link::after {
+  content: "";
+  height: 100%;
+  width: 30px;
+  position: absolute;
+  top: 0;
+  left: 100%;
+  background: rgba(255, 255, 255, 0.6);
+  transform: skewX(-20deg) translateX(-150px);
+  transition: all 0.3s linear;
+  filter: blur(10px);
+}
+
+.button-link:hover::after {
+  transform: skewX(-20deg) translateX(100%);
+}
+
+.button-link:hover {
+  scale: 1.1;
+  cursor: pointer;
+}
+
+/* MEDIA QUERIES */
+/* FOR MOBILES */
+
+@media only screen and (max-width: 600px) {
+  html {
+    width: 100vw;
+  }
+  header {
+    flex-direction: column;
+    height: 30vh;
+    width: 100vw;
+    position: absolute;
+    background: transparent;
+    padding: 5px;
+  }
+
+  header nav {
+    flex-direction: column;
+    margin: 0;
+    text-align: center;
+  }
+
+  header nav li {
+    margin: 10px 0;
+  }
+
+  section {
+    flex-direction: column;
+    height: fit-content;
+    padding: 20px;
+  }
+
+  iframe {
+    width: 100%;
+    margin: 20px 0;
+  }
+}

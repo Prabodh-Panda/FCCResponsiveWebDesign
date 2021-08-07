@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logistics Manager</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header id="header">
+        <div class="branding">
+            <img src="logo.png" alt="Logistics Manager Logo" id="header-img">
+            <h1 id="branding">Logistics Manager</h1>
+        </div>
+        <nav id="nav-bar">
+            <li class="nav-link-li"><a class="nav-link" href="#features">Features</a></li>
+            <li class="nav-link-li"><a class="nav-link" href="#installation">Installation</a></li>
+            <li class="nav-link-li">
+                <a href="https://prabodh-panda.github.io/FCCResponsiveWebDesign/4.%20Technical%20Documentation"
+                    target="_blank">
+                    Documentation
+                </a>
+            </li>
+            <li class="nav-link-li"><a class="nav-link" href="#newsletter">Newsletter</a></li>
+        </nav>
+    </header>
+
+    <main>
+        <div class="content">
+            <h1 class="hero-title">Logistics Manager</h1>
+            <p class="hero-desc">Simplifying Logistics</p>
+            <div class="button-grp">
+                <a class="button-link"
+                    href="https://github.com/Prabodh-Panda/logistics-manager-java/releases/download/v0.1-alpha/logistics_manager_v0.0.1-alpha.zip">Download</a>
+                <a class="button-link" href="#features">Learn More</a>
+            </div>
+        </div>
+    </main>
+
+    <section id="features">
+        <h1 class="section-header">Features</h1>
+        <div class="section-content">
+            <p>The Logistics Manager software provides features which are essential for a Logistics Company. These
+                include: </p>
+            <ul>
+                <li>Creating and Modifying Orders and their status</li>
+                <li>Managing a record of all the vehicles owned by the company</li>
+                <li>Managing the movement of shipments from one branch to another</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="installation">
+        <div class="section-details">
+            <h1 class="section-header">Installation</h1>
+            <p>The installation process requires you to follow two steps:
+                <dl>
+                    <dt>Setup Database Credential</dt>
+                    <dd>For this extract the downloaded file and run the JAR file. When you open the JAR File for the
+                        first time, a window will popup and will ask you for your credentials</dd>
+                    <dt>Setup Database and Tables</dt>
+                    <dd>The Software needs a database and a few tables in it to function. To create the database and
+                        tables simply run the included SQL Script.</dd>
+                </dl>
+            </p>
+        </div>
+        <div class="section-content videoWrapper">
+            <iframe height="100%" width="500px" id="video" src="https://www.youtube.com/embed/O2WGEQkELmQ">
+            </iframe>
+        </div>
+    </section>
+
+    <section id="newsletter">
+        <div class="section-details">
+            <h1 class="section-header">Newsletter</h1>
+        </div>
+        <div class="section-content">
+            <p>Subscribe to our newsletter to get updates about new features and updates</p>
+            <form id="form" action="https://www.freecodecamp.com/email-submit">
+                <input type="email" name="email" id="email" placeholder="Enter Your Email">
+                <input type="submit" value="Submit" class="button-link" id="submit"></input>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; Prabodh Kumar Panda, 2021</p>
+
+        <div>
+            Icons made by <a href="https://www.flaticon.com/authors/pixel-perfect"
+                title="Pixel perfect">Pixelperfect</a> from <a href="https://www.flaticon.com/"
+                title="Flaticon">www.flaticon.com</a>
+        </div>
+    </footer>
+
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+</body>
+
+</html>
