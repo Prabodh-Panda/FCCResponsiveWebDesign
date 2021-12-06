@@ -38,6 +38,7 @@ header {
 .branding h1,
 .content h1 {
   font-family: "Lobster", cursive;
+  font-weight: lighter;
 }
 
 p,
